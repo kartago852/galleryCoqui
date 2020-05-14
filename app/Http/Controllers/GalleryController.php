@@ -2,14 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Categorias;
+use App\Imagen;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class GalleryController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('galeria.index');
+        if ($request) {
+            $query = trim($request->get('search'));
+
+            $imagenes= Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(5);
+
+            return view('galeria.index', ['categorias' => Categorias::all(), 'imagenes' => $imagenes]);
+        }
+
     }
 
 
@@ -21,7 +31,33 @@ class GalleryController extends Controller
 
     public function store(Request $request)
     {
-        return 'hola';
+        $categoria = new Categorias();
+
+        $categoria->nombre = request('nombre');
+
+        $categoria->save();
+
+        return redirect('admin')->with('success', 'Fue Creado Con exito');
+
+    }
+
+    public function guardarImangen(Request $request)
+    {
+        $file = $request->file('imagen');
+
+        if ($file != "" && $request->hasFile('imagen')) {
+            $name = $file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name);
+        }
+
+        $imagen = new Imagen();
+
+        $imagen->nombre = request('nombre');
+        /* $request->imagen->storeAs('images'); */
+        $imagen->imagen =  $name;
+        $imagen->save();
+
+        return redirect('admin')->with('success', 'Fue Creado Con exito');
     }
 
 

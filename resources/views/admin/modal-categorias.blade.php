@@ -1,8 +1,8 @@
-<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addRole">Crear Categoria</button>
+<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addCategory">Crear Categoria</button>
 
 {!! Form::open(['url' => 'gallery']) !!}
 {{ Form::token() }}
-<div class="modal fade" id="addRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -16,13 +16,13 @@
                 <form>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Nombre de Categoria:</label>
-                        <input name="name" type="text" class="form-control" id="recipient-name">
+                        <input name="nombre" type="text" class="form-control" id="recipient-name">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-primary">Guardar Rol</button>
+                <button type="submit" class="btn btn-primary">Guardar Categoria</button>
             </div>
         </div>
     </div>

@@ -8,6 +8,8 @@ Route::resource('/', 'HomeController');
 
 Route::resource('gallery','GalleryController' );
 
+Route::post('gallery/imagen','GalleryController@guardarImangen' );
+
 Route::resource('contact','ContactController' );
 
 Route::resource('admin','AdminController' );

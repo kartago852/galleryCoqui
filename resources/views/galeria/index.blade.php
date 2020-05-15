@@ -14,7 +14,33 @@
 
 
 <!-- Gallery -->
-<div class="section-gallery p-t-118 p-b-100">
+<div class="container">
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="card card-sm">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <img src="https://img.icons8.com/material/24/000000/search--v1.png" />
+                    </div>
+                    <!--end of col-->
+                    <div class="col">
+                        <input class="form-control form-control-lg form-control-borderless" type="search" name="search"
+                            placeholder="Ingrese el nombre del disfraz">
+                    </div>
+                    <!--end of col-->
+                    <div class="col-auto">
+                        <button class="btn btn-lg btn-success" type="submit">Buscar</button>
+                    </div>
+                    <!--end of col-->
+                </div>
+            </form>
+        </div>
+        <!--end of col-->
+    </div>
+</div>
+
+<div class="section-gallery p-t-60 p-b-100">
     <div
         class="wrap-label-gallery filter-tope-group size27 flex-w flex-sb-m m-l-r-auto flex-col-c-sm p-l-15 p-r-15 m-b-60">
         <button class="label-gallery txt26 trans-0-4 is-actived" data-filter="*">
@@ -31,7 +57,7 @@
         <!-- - -->
         @foreach ($imagenes as $imagen)
         <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom {{$imagen->categoria_nombre}}">
-        <img src="images/{{$imagen->imagen}}" alt="IMG-GALLERY">
+            <img src="images/{{$imagen->imagen}}" alt="{{$imagen->imagen}}">
 
             <div class="overlay-item-gallery trans-0-4 flex-c-m">
                 <a class="btn-show-gallery flex-c-m fa fa-search" href="images/{{$imagen->imagen}}"

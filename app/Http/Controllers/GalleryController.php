@@ -6,6 +6,7 @@ use App\Categorias;
 use App\Imagen;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Requests\ImagenFormRequest;
 
 class GalleryController extends Controller
 {
@@ -17,7 +18,7 @@ class GalleryController extends Controller
 
             $imagenes= Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(5);
 
-            return view('galeria.index', ['categorias' => Categorias::all(), 'imagenes' => $imagenes]);
+            return view('galeria.index', ['categorias' => Categorias::all(), 'imagenes' => $imagenes, 'search' => $query]);
         }
 
     }
@@ -31,6 +32,10 @@ class GalleryController extends Controller
 
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'nombre' => 'required',
+        ]);
+
         $categoria = new Categorias();
 
         $categoria->nombre = request('nombre');
@@ -43,6 +48,13 @@ class GalleryController extends Controller
 
     public function guardarImangen(Request $request)
     {
+        $validatedData = $request->validate([
+            'nombre' => 'required',
+            'categoria' => 'required',
+            'imagen' => 'required',
+
+        ]);
+
         $file = $request->file('imagen');
 
         if ($file != "" && $request->hasFile('imagen')) {

@@ -1,4 +1,5 @@
-<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addCategory">Crear Categoria</button>
+<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addCategory">Crear
+    Categoria</button>
 
 {!! Form::open(['url' => 'gallery']) !!}
 {{ Form::token() }}
@@ -13,6 +14,15 @@
                 </button>
             </div>
             <div class="modal-body">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <form>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Nombre de Categoria:</label>
@@ -28,4 +38,3 @@
     </div>
 </div>
 {!! Form::close() !!}
-

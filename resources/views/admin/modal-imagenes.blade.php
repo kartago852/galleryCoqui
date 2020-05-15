@@ -1,4 +1,5 @@
-<button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addImage">Subir Imagen</button>
+<button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addImage">Subir
+    Imagen</button>
 
 {!! Form::open(['url' => 'gallery/imagen', 'files' => true]) !!}
 {{ Form::token() }}
@@ -13,6 +14,15 @@
                 </button>
             </div>
             <div class="modal-body">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <form>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Nombre de Imagen:</label>
@@ -20,14 +30,14 @@
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Ingrese Imagen:</label>
-                        <input name="imagen" type="file"  file="true">
+                        <input name="imagen" type="file" file="true">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Seleccione Categoria:</label>
                         <select name="categoria" class="form-control" name="categoria">
                             <option selected disabled> Elige una categoria para la imagen...</option>
                             @foreach ($categorias as $categoria)
-                                <option value="{{ $categoria->nombre }}">{{ $categoria->nombre }}</option>
+                            <option value="{{ $categoria->nombre }}">{{ $categoria->nombre }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -41,4 +51,3 @@
     </div>
 </div>
 {!! Form::close() !!}
-

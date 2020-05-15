@@ -22,15 +22,15 @@
                         <label for="recipient-name" class="col-form-label">Ingrese Imagen:</label>
                         <input name="imagen" type="file"  file="true">
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Seleccione Categoria:</label>
                         <select name="categoria" class="form-control" name="categoria">
                             <option selected disabled> Elige una categoria para la imagen...</option>
                             @foreach ($categorias as $categoria)
-                                <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
+                                <option value="{{ $categoria->nombre }}">{{ $categoria->nombre }}</option>
                             @endforeach
                         </select>
-                    </div> --}}
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">

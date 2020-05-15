@@ -53,9 +53,11 @@ class GalleryController extends Controller
         $imagen = new Imagen();
 
         $imagen->nombre = request('nombre');
-        /* $request->imagen->storeAs('images'); */
         $imagen->imagen =  $name;
+        $imagen->categoria_nombre = request('categoria');
         $imagen->save();
+
+        /* dd($imagen); */
 
         return redirect('admin')->with('success', 'Fue Creado Con exito');
     }

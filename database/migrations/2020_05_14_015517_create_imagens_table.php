@@ -17,7 +17,9 @@ class CreateImagensTable extends Migration
             $table->id();
             $table->string('nombre')->nullable();
             $table->binary('imagen')->nullable();
+            $table->string('categoria_nombre')->nullable();
             $table->timestamps();
+
         });
     }
 

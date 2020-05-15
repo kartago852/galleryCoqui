@@ -44,7 +44,7 @@
             All Photo
         </button>
         @foreach ($categorias as $categoria)
-        <button class="label-gallery txt26 trans-0-4" data-filter="*">
+        <button class="label-gallery txt26 trans-0-4" data-filter=".{{ $categoria->nombre }}">
             {{ $categoria->nombre }}
         </button>
         @endforeach

@@ -19,7 +19,7 @@
 
 						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
 							<!-- Button1 -->
-							<a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+							<a href="{{ url('gallery') }}" class="btn1 flex-c-m size1 txt3 trans-0-4">
 							    Galeria
 							</a>
 						</div>
@@ -38,7 +38,7 @@
 
 						<div class="wrap-btn-slide1 animated visible-false" data-appear="slideInUp">
 							<!-- Button1 -->
-							<a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+							<a href="{{ url('gallery') }}" class="btn1 flex-c-m size1 txt3 trans-0-4">
 								Galeria
 							</a>
 						</div>
@@ -57,7 +57,7 @@
 
 						<div class="wrap-btn-slide1 animated visible-false" data-appear="rotateIn">
 							<!-- Button1 -->
-							<a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+							<a href="{{ url('gallery') }}" class="btn1 flex-c-m size1 txt3 trans-0-4">
 								Galeria
 							</a>
 						</div>
@@ -197,7 +197,7 @@
 	</section> --}}
 
 	<!-- Our menu -->
-	<section class="section-ourmenu bg2-pattern p-t-115 p-b-120">
+	{{-- <section class="section-ourmenu bg2-pattern p-t-115 p-b-120">
 		<div class="container">
 			<div class="title-section-ourmenu t-center m-b-22">
 				<span class="tit2 t-center">
@@ -292,7 +292,7 @@
 			</div>
 
 		</div>
-	</section>
+	</section> --}}
 
 
 	<!-- Event -->
@@ -569,7 +569,7 @@
 	<!-- Booking -->
 
 	<!-- Review -->
-	<section class="section-review p-t-115">
+	{{-- <section class="section-review p-t-115">
 		<!-- - -->
 		<div class="title-review t-center m-b-2">
 			<span class="tit2 p-l-15 p-r-15">
@@ -672,11 +672,11 @@
 
 			<div class="wrap-slick3-dots m-t-30"></div>
 		</div>
-	</section>
+	</section> --}}
 
 
 	<!-- Video -->
-	<section class="section-video parallax100" style="background-image: url(images/bg-cover-video-02.jpg);">
+	{{-- <section class="section-video parallax100" style="background-image: url(images/bg-cover-video-02.jpg);">
 		<div class="content-video t-center p-t-225 p-b-250">
 			<span class="tit2 p-l-15 p-r-15">
 				Discover
@@ -692,11 +692,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 
 
 	<!-- Blog -->
-	<section class="section-blog bg-white p-t-115 p-b-123">
+	{{-- <section class="section-blog bg-white p-t-115 p-b-123">
 		<div class="container">
 			<div class="title-section-ourmenu t-center m-b-22">
 				<span class="tit2 t-center">
@@ -795,7 +795,7 @@
 
 			</div>
 		</div>
-	</section>
+	</section> --}}
 
 
 	<!-- Sign up -->

@@ -14,7 +14,7 @@
 
 
 <!-- Gallery -->
-<div class="container">
+{{-- <div class="container">
     <br />
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
@@ -38,8 +38,9 @@
         </div>
         <!--end of col-->
     </div>
-</div>
+</div> --}}
 
+<!-- Gallery Photos -->
 <div class="section-gallery p-t-60 p-b-100">
     <div
         class="wrap-label-gallery filter-tope-group size27 flex-w flex-sb-m m-l-r-auto flex-col-c-sm p-l-15 p-r-15 m-b-60">

@@ -11,12 +11,21 @@ class AdminController extends Controller
 
     public function index(Request $request)
     {
-        if ($request) {
+        if ($request->ajax()) {
+            $imagenes = Imagen::all();
+            return response()->json($imagenes,200);
+
+        }
+        $query = trim($request->get('search'));
+        $imagenes = Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(10);
+
+        return view('admin.index',['categorias' => Categorias::all(), 'imagenes' => $imagenes]);
+        /* if ($request) {
 
             $query = trim($request->get('search'));
-            $imagenes = Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(4);
+            $imagenes = Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(10);
             return view('admin.index',['categorias' => Categorias::all(), 'imagenes' => $imagenes]);
-        }
+        } */
     }
 
 

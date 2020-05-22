@@ -77,11 +77,11 @@
 				<div class="col-md-6 p-t-45 p-b-30">
 					<div class="wrap-text-welcome t-center">
 						<span class="tit2 t-center">
-							Italian Restaurant
+							Disfrances Coqui
 						</span>
 
 						<h3 class="tit3 t-center m-b-35 m-t-5">
-							Welcome
+							Bienvenidos
 						</h3>
 
 						<p class="t-center m-b-22 size3 m-l-r-auto">

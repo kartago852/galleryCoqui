@@ -12,7 +12,7 @@ Route::post('gallery/imagen','GalleryController@guardarImangen' );
 
 Route::resource('contact','ContactController' );
 
-Route::resource('admin','AdminController' );
+Route::resource('admin','AdminController' )->middleware('auth');
 
 
 Auth::routes();

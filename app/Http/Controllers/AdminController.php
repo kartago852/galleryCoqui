@@ -17,7 +17,7 @@ class AdminController extends Controller
 
         }
         $query = trim($request->get('search'));
-        $imagenes = Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(10);
+        $imagenes = Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(5);
 
         return view('admin.index',['categorias' => Categorias::all(), 'imagenes' => $imagenes]);
         /* if ($request) {

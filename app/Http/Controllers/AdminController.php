@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Categorias;
 use App\Imagen;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Routing\ResponseFactory;
 
 class AdminController extends Controller
 {
@@ -12,20 +13,15 @@ class AdminController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $imagenes = Imagen::all()->paginate(5);
-            return response()->json($imagenes,200);
-
-        }
-        $query = trim($request->get('search'));
-        $imagenes = Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(5);
-
-        return view('admin.index',['categorias' => Categorias::all(), 'imagenes' => $imagenes]);
-        /* if ($request) {
-
             $query = trim($request->get('search'));
-            $imagenes = Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(10);
-            return view('admin.index',['categorias' => Categorias::all(), 'imagenes' => $imagenes]);
-        } */
+
+            $imagenes = Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(5);
+
+            return response()->json($imagenes,200);
+        }
+            $categorias =  Categorias::all();
+
+            return view('admin.index',compact('categorias'));
     }
 
 

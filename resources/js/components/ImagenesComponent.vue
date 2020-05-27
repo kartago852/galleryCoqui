@@ -12,7 +12,7 @@
             </thead>
             <tbody>
                 <!--@foreach ($imagenes as $imagen)-->
-                <tr v-for="imagen in imagenes">
+                <tr v-for="imagen in imagenes.data">
                     <th scope="row">{{ imagen.id }}</th>
                     <td>{{ imagen.nombre }}</td>
                     <td>{{ imagen.categoria_nombre}}</td>
@@ -45,6 +45,7 @@
                 <!--{{ $imagenes->links()}}-->
             <!--</div>-->
         <!--</div>-->
+        <pagination :data="imagenes" @pagination-change-page="getResults"></pagination>
     </div>
 </template>
 
@@ -52,11 +53,20 @@
 export default {
     data() {
         return {
-            imagenes: []
+            imagenes: {}
         }
     },
     mounted() {
         axios.get('http://127.0.0.1:8000/admin').then(response => (this.imagenes = response.data))
+        this.getResults();
+    },
+    methods: {
+        getResults(page = 1) {
+			axios.get('http://127.0.0.1:8000/admin?page=' + page).then(response => {
+					this.imagenes = response.data;
+				});
+		}
+
     },
 }
 </script>

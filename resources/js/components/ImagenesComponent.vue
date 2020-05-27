@@ -18,7 +18,7 @@
                     <td>{{ imagen.categoria_nombre}}</td>
                     <td>
                         <div class="float-left">
-                            <a href="images/" data-lightbox="gallery">
+                            <a v-bind:href="'images/'+imagen.imagen " data-lightbox="gallery">
                                 <button type="button" class="btn btn-success float-right">Ver Imagen</button>
                             </a>
                         </div>
@@ -40,11 +40,11 @@
                 <!--@endforeach-->
             </tbody>
         </table>
-        <div class="row">
+        <!--<div class="row">
             <div class="mx-auto">
                 <!--{{ $imagenes->links()}}-->
-            </div>
-        </div>
+            <!--</div>-->
+        <!--</div>-->
     </div>
 </template>
 

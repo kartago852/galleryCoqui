@@ -37612,16 +37612,36 @@ var render = function() {
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(imagen.categoria_nombre))]),
             _vm._v(" "),
-            _vm._m(1, true),
+            _c("td", [
+              _c("div", { staticClass: "float-left" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "images/" + imagen.imagen,
+                      "data-lightbox": "gallery"
+                    }
+                  },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success float-right",
+                        attrs: { type: "button" }
+                      },
+                      [_vm._v("Ver Imagen")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _vm._m(2, true)
+            _vm._m(1, true)
           ])
         }),
         0
       )
-    ]),
-    _vm._v(" "),
-    _vm._m(3)
+    ])
   ])
 }
 var staticRenderFns = [
@@ -37647,34 +37667,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("div", { staticClass: "float-left" }, [
-        _c("a", { attrs: { href: "images/", "data-lightbox": "gallery" } }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-success float-right",
-              attrs: { type: "button" }
-            },
-            [_vm._v("Ver Imagen")]
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("td", [_c("li")])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "mx-auto" })
-    ])
   }
 ]
 render._withStripped = true

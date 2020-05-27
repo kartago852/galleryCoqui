@@ -12,7 +12,7 @@ class AdminController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $imagenes = Imagen::all();
+            $imagenes = Imagen::all()->paginate(5);
             return response()->json($imagenes,200);
 
         }

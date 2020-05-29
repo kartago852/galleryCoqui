@@ -11,6 +11,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('imagenes-component', require('./components/ImagenesComponent.vue').default);
+Vue.component('galeria-component', require('./components/GaleriaComponent.vue').default);
 Vue.component('pagination', require('laravel-vue-pagination'));
 
 

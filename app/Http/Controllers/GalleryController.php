@@ -13,13 +13,22 @@ class GalleryController extends Controller
 
     public function index(Request $request)
     {
-        if ($request) {
+        if ($request->ajax()) {
+
+            $categorias = Categorias::all();
+
             $query = trim($request->get('search'));
 
-            $imagenes= Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(5);
+            //$imagenes= Imagen::where('nombre', 'LIKE', '%' .$query .'%')->orderBy('id','asc')->paginate(5);
 
-            return view('galeria.index', ['categorias' => Categorias::all(), 'imagenes' => $imagenes, 'search' => $query]);
+            $imagenes= Imagen::orderBy('id','asc')->paginate(5);
+
+            return response()->json($imagenes,200);
         }
+
+        $categorias = Categorias::all();
+
+        return view('galeria.index',compact('categorias'));
 
     }
 

@@ -68,6 +68,10 @@
                                 <li>
                                     <a href="{{ url('admin')}}">Admin</a>
                                 </li>
+
+                                <li>
+                                    <a href="{{ url('prueba')}}">Pruebas</a>
+                                </li>
                                 @endauth
 
 							</ul>
@@ -104,8 +108,12 @@
 				<a href="{{ url('contact') }}" class="txt19">Contact</a>
             </li>
             @auth
-            <li class="t-center m-b-33">
+            <li class="t-center m-b-13">
                 <a href="{{ url('admin')}}" class="txt19">Admin</a>
+            </li>
+
+            <li class="t-center m-b-33">
+                <a href="{{ url('prueba')}}" class="txt19">Pruebas</a>
             </li>
             @endauth
 

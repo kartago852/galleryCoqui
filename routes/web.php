@@ -12,6 +12,8 @@ Route::post('gallery/imagen','GalleryController@guardarImangen' );
 
 Route::resource('contact','ContactController' );
 
+Route::resource('prueba','PruebaController' );
+
 Route::resource('admin','AdminController' )->middleware('auth');
 
 

@@ -7,7 +7,7 @@
 	<section class="section-slide">
 		<div class="wrap-slick1">
 			<div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(images/slide1-01.jpg);">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/home-costa2.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Bienvenido a
@@ -26,7 +26,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 item2-slick1" style="background-image: url(images/master-slides-02.jpg);">
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/home-selva.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
 							Bienvenido a
@@ -45,7 +45,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 item3-slick1" style="background-image: url(images/master-slides-01.jpg);">
+				<div class="item-slick1 item3-slick1" style="background-image: url(images/home-sierra.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
 							Bienvenido a
@@ -85,7 +85,7 @@
 						</h3>
 
 						<p class="t-center m-b-22 size3 m-l-r-auto">
-							Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
+							Somos una Tienda de disfraces con mas de 20 año de existencia, contamos con amplia variedad de disfraces, no solo folkloricos sino tambien de fantasia y variados.
 						</p>
 
 						<a href="about.html" class="txt4">

@@ -22,8 +22,6 @@ class GalleryController extends Controller
         $imagenes= Imagen::orderBy('id','asc')->paginate(5);
 
         if ($request->ajax()) {
-
-            /* return response()->json(view('galeria.imagenes',compact('categorias','imagenes'))->render()); */
             return view('galeria.imagenes',compact('categorias','imagenes'))->render();
         }
 

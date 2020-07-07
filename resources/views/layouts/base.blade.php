@@ -211,7 +211,7 @@
 					</div>
 
 					<div class="txt17 p-r-20 p-t-5 p-b-5">
-						Copyright &copy; 2020 Todos los derechos reservados  | Este template esta diseñado por <strong> Franco Pacori Aliaga </strong>
+						Copyright &copy; 2020 Todos los derechos reservados  
 					</div>
 				</div>
 			</div>

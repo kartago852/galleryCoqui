@@ -4,7 +4,7 @@
 
 
 	<!-- Title Page -->
-	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/bg-title-page-02.jpg);">
+	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/contact2-home.jpg);">
 		<h2 class="tit6 t-center">
 			Contact
 		</h2>
@@ -87,11 +87,11 @@
 
 						<div class="flex-col-l">
 							<span class="txt5 p-b-10">
-								Location
+								Ubicacion
 							</span>
 
 							<span class="txt23 size38">
-								8th floor, 379 Hudson St, New York, NY 10018
+								Jr. Chilca 136, Jose Galvez
 							</span>
 						</div>
 					</div>
@@ -106,11 +106,11 @@
 
 						<div class="flex-col-l">
 							<span class="txt5 p-b-10">
-								Call Us
+								Comunicanos
 							</span>
 
 							<span class="txt23 size38">
-								(+1) 96 716 6879
+								(+51) 998 455 484
 							</span>
 						</div>
 					</div>
@@ -125,11 +125,11 @@
 
 						<div class="flex-col-l">
 							<span class="txt5 p-b-10">
-								Opening Hours
+								Horarios de Atencion
 							</span>
 
 							<span class="txt23 size38">
-								09:30 AM – 11:00 PM <br/>Every Day
+								09:30 AM – 11:00 PM <br/>Todo el dia
 							</span>
 						</div>
 					</div>

@@ -22,7 +22,7 @@
 		</div>
 
 		<div class="container">
-			<h3 class="tit7 t-center p-b-62 p-t-105">
+			{{-- <h3 class="tit7 t-center p-b-62 p-t-105">
 				Send us a Message
 			</h3>
 
@@ -76,7 +76,7 @@
 						Submit
 					</button>
 				</div>
-			</form>
+			</form> --}}
 
 			<div class="row p-t-135">
 				<div class="col-sm-8 col-md-4 col-lg-4 m-l-r-auto p-t-30">

@@ -86,12 +86,8 @@
 
 						<p class="t-center m-b-22 size3 m-l-r-auto">
 							Somos una Tienda de disfraces con mas de 20 año de existencia, contamos con amplia variedad de disfraces, no solo folkloricos sino tambien de fantasia y variados.
-						</p>
+                        </p>
 
-						<a href="about.html" class="txt4">
-							Our Story
-							<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-						</a>
 					</div>
 				</div>
 
